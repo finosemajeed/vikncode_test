@@ -1,16 +1,11 @@
 # vikncode_test
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+![photo_2024-01-15_00-20-48](https://github.com/finosemajeed/vikncode_test/assets/36195634/025c8436-d5b2-4d87-91e4-ff9df994ba45)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![photo_2024-01-15_00-20-44](https://github.com/finosemajeed/vikncode_test/assets/36195634/c2519afd-c391-458d-ad87-5c9d1fdce67b)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
