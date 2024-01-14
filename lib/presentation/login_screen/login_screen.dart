@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:vikncode_test/application/login_controller/controller/login_controller.dart';
+import 'package:vikncode_test/domain/routes/app_pages.dart';
 
 class LoginScreen extends GetView<LoginController> {
   const LoginScreen({super.key});
@@ -191,7 +192,7 @@ class LoginScreen extends GetView<LoginController> {
                                         onTap: () {
                                           controller.showPassword();
                                         },
-                                        child: controller.obscurePassword.value
+                                        child: !controller.obscurePassword.value
                                             ? const Icon(
                                                 Icons.remove_red_eye_outlined,
                                                 color: Color(0xFF0A9EF3),
@@ -245,7 +246,8 @@ class LoginScreen extends GetView<LoginController> {
                     onTap: controller.isLoading.value
                         ? null
                         : () {
-                            controller.onLoginClick();
+                            // controller.onLoginClick();
+                            Get.toNamed(Routes.MAIN_SCREEN);
                           },
                     child: Container(
                         width: 125.w,

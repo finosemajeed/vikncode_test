@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vikncode_test/domain/model/login_request_model.dart';
 import 'package:vikncode_test/domain/routes/app_pages.dart';
-import 'package:vikncode_test/infrastracture/login_repository.dart';
+import 'package:vikncode_test/infrastracture/repository.dart';
 
 class LoginController extends GetxController {
   TextEditingController usernameController = TextEditingController();
@@ -12,6 +12,7 @@ class LoginController extends GetxController {
   RxBool isLoading = false.obs;
 
   onLoginClick() async {
+
     if (!formKey.currentState!.validate()) return;
 
     final inputUsername = usernameController.text.trim();
@@ -24,7 +25,7 @@ class LoginController extends GetxController {
       password: inputPassword,
     );
     try {
-      final user = await LoginRepository().userLogin(userModel);
+      final user = await Repository().userLogin(userModel);
       if (user.success == 6000) {
         Get.snackbar(
           'Success',
