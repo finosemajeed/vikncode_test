@@ -20,8 +20,10 @@ class Repository {
       if (response.statusCode == 200 || response.statusCode == 201) {
         // final result = response.data;
         final data = LoginResponseModel.fromJson(response.data);
-        String accessToken = response.data['data']['access'];
-        await sharedPref.saveAccessToken(accessToken);
+        if (data.data != null) {
+          String accessToken = data.data!.access.toString();
+          await sharedPref.saveAccessToken(accessToken);
+        }
 
         return data;
       } else {
@@ -40,8 +42,6 @@ class Repository {
       await sharedPref.initSharedPreferences();
 
       String? accessToken = await sharedPref.getAccessToken();
-
-      // log(accessToken.toString(), name: 'dfdfdf');
 
       if (accessToken == null || accessToken.trim().isEmpty) {
         return null;

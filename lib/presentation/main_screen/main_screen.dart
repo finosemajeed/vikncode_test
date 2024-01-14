@@ -1,19 +1,13 @@
 import 'dart:developer';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:vikncode_test/application/main_screen_controller/controller/main_screen_controller.dart';
-import 'package:vikncode_test/infrastracture/repository.dart';
 
 class MainScreen extends GetView<MainScreenController> {
   const MainScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    // Repository().salesList();
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -30,6 +24,12 @@ class MainScreen extends GetView<MainScreenController> {
               height: 0,
             ),
           ),
+          actions: const [
+            Icon(
+              Icons.add,
+              color: Color(0xFF0A9EF3),
+            )
+          ],
         ),
         body: Column(
           children: [

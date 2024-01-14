@@ -5,10 +5,11 @@ import 'package:vikncode_test/domain/model/sales_list_response_model.dart';
 import 'package:vikncode_test/infrastracture/repository.dart';
 
 class MainScreenController extends GetxController {
-  int pageItemsCount = 15;
+
   final RxInt _pageLength = 1.obs;
   ScrollController scrollController = ScrollController();
   RxBool isLoadingSalesList = false.obs;
+  
   RxList<Data> salesListData = <Data>[].obs;
 
   @override
@@ -46,7 +47,7 @@ class MainScreenController extends GetxController {
       createdUserID: 62,
       priceRounding: 3,
       pageNo: _pageLength.value,
-      itemsPerPage: 15,
+      itemsPerPage: 30,
       type: 'Sales',
       warehouseID: 1,
     );

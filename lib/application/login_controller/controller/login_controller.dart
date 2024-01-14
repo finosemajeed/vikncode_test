@@ -12,7 +12,6 @@ class LoginController extends GetxController {
   RxBool isLoading = false.obs;
 
   onLoginClick() async {
-
     if (!formKey.currentState!.validate()) return;
 
     final inputUsername = usernameController.text.trim();
@@ -37,7 +36,7 @@ class LoginController extends GetxController {
             style: TextStyle(color: Colors.green),
           ),
         );
-        Get.offNamed(Routes.MAIN_SCREEN);
+        Get.toNamed(Routes.MAIN_SCREEN);
         isLoading.value = false;
       } else {
         Get.snackbar(
